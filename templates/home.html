@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Next Word</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Predicting the next word using Bidirectional LSTM</h1>
+        <form action="{{ url_for('predict_next_word_route') }}" method="post">
+            <input type="text" name="InputText" placeholder="Input your text here..." required="required" /><br>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        {% if word %}
+        <h3>The Next possible word is: {{ word }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

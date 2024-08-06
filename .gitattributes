@@ -1,0 +1,6 @@
+# Set the default behavior to automatically normalize line endings.
+* text=auto
+
+# Define the line ending style for specific file types
+*.sh text eol=lf
+*.bat text eol=crlf
